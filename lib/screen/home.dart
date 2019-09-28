@@ -15,6 +15,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: Text("TIPS"),
+          backgroundColor: Color.fromRGBO(78, 68, 52, 1),
           elevation: 0,
         ),
       body: Column(

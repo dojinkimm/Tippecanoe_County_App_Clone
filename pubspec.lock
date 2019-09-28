@@ -46,13 +46,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  get_it:
+  font_awesome_flutter:
     dependency: "direct main"
     description:
-      name: get_it
+      name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0+1"
+    version: "8.5.0"
   matcher:
     dependency: transitive
     description:

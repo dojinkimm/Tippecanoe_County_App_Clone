@@ -33,6 +33,7 @@ class GridList extends StatelessWidget {
       itemCount: data.length,
       itemBuilder: (_, int index) {
         Data d = data[index];
+        Color cardColor = index%2==0? Color.fromRGBO(132, 108, 77, 1) : Color.fromRGBO(153, 134, 104, 1);
 
         return Container(
           child: InkWell(
@@ -53,12 +54,12 @@ class GridList extends StatelessWidget {
               }
             },
             child: Card(
-            color: d.color,
+            color: cardColor,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(d.icon, color: Colors.white,size:MediaQuery.of(context).size.width*0.15),
+                Icon(d.icon, color: Colors.white, size:MediaQuery.of(context).size.width*0.15),
                 Text(d.title, style: TextStyle(color: Colors.white)),
               ],
             )

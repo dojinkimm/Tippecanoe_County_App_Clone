@@ -1,6 +1,6 @@
 import '../models/data.dart';
 import 'package:flutter/material.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 List<Data> info_main = [
   Data(index: 0, title: "Admin", icon: Icons.business, color: Colors.blue, status: BlockStatus.ADMIN),
@@ -32,14 +32,14 @@ List<Data> info_correction = [
 
 List<Data> info_services = [
   Data(index: 0, title: "Back", icon: Icons.arrow_back, color: Colors.blue, status: BlockStatus.BACK),
-  Data(index: 1, title: "Sheriff's Sale", icon: Icons.attach_money, color: Colors.blueAccent, status: BlockStatus.MODAL),
-  Data(index: 2, title: "Gun Permits", icon: Icons.help_outline, color: Colors.blue, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/477/Firearm-Permits"),
-  Data(index: 3, title: "Car Reports", icon: Icons.help_outline, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/486/Crash-Reports"),
-  Data(index: 4, title: "Records Request", icon: Icons.help_outline, color: Colors.blue, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/524/Public-Record-Requests"),
-  Data(index: 5, title: "Animal Control", icon: Icons.help_outline, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/473/Animal-Control"),
-  Data(index: 6, title: "Security and extra patrol request", icon: Icons.help_outline, color: Colors.blue, status: BlockStatus.MODAL),
-  Data(index: 7, title: "Tax Warrants", icon: Icons.help_outline, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/480/Tax-Warrants"),
-  Data(index: 8, title: "Traffic complaints", icon: Icons.help_outline, color: Colors.blue, status: BlockStatus.COMPLAINT),
+  Data(index: 1, title: "Sheriff's Sale", icon: FontAwesomeIcons.discourse, color: Colors.blueAccent, status: BlockStatus.MODAL),
+  Data(index: 2, title: "Gun Permits", icon: FontAwesomeIcons.helicopter, color: Colors.blue, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/477/Firearm-Permits"),
+  Data(index: 3, title: "Car Reports", icon: FontAwesomeIcons.carCrash, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/486/Crash-Reports"),
+  Data(index: 4, title: "Records Request", icon: FontAwesomeIcons.photoVideo, color: Colors.blue, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/524/Public-Record-Requests"),
+  Data(index: 5, title: "Animal Control", icon: FontAwesomeIcons.dog, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/473/Animal-Control"),
+  Data(index: 6, title: "Security and extra patrol request", icon: FontAwesomeIcons.shieldAlt, color: Colors.blue, status: BlockStatus.MODAL),
+  Data(index: 7, title: "Tax Warrants", icon: FontAwesomeIcons.dollarSign, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "http://tippecanoe.in.gov/480/Tax-Warrants"),
+  Data(index: 8, title: "Traffic complaints", icon: FontAwesomeIcons.exclamationTriangle, color: Colors.blue, status: BlockStatus.COMPLAINT),
 ];
 
 List<Data> info_sns = [

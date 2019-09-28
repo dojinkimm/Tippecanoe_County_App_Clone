@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Sheriff App',
       theme: ThemeData(
         primarySwatch: Colors.brown,
-        scaffoldBackgroundColor: Colors.brown
+        scaffoldBackgroundColor: Color.fromRGBO(78, 68, 52, 1)
       ),
       home: Home(),
     );
