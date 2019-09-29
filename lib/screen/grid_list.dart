@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 import '../blocs/information_bloc.dart';
 import '../models/data.dart';
@@ -35,7 +36,12 @@ class GridList extends StatelessWidget {
         Data d = data[index];
         Color cardColor = index%2==0? Color.fromRGBO(132, 108, 77, 1) : Color.fromRGBO(153, 134, 104, 1);
 
-        return Container(
+        return _buildCard(context, d, cardColor);
+      });
+  }
+
+  Widget _buildCard(BuildContext context, Data d, Color cardColor){
+    return Container(
           child: InkWell(
             onTap: (){
               if (d.status==BlockStatus.ADMIN){
@@ -50,23 +56,24 @@ class GridList extends StatelessWidget {
                 infoBloc.eventSink.add(StartEvent());
               }else if (d.status==BlockStatus.URL_LAUNCHER){
                 _launchURL(d.url);
-                print(d.url);
               }
             },
             child: Card(
             color: cardColor,
-            child: Column(
+            child: Container(
+              alignment: Alignment.center,
+              child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(d.icon, color: Colors.white, size:MediaQuery.of(context).size.width*0.15),
-                Text(d.title, style: TextStyle(color: Colors.white)),
+                Icon(d.icon, color: Colors.white, size:MediaQuery.of(context).size.width*0.13),
+                SizedBox(height: 10.0,),
+                Center(child: AutoSizeText(d.title, style: TextStyle(color: Colors.white), maxLines: 2),)
               ],
+            ),
             )
           ),
           )
         );
-      });
   }
 
   _launchURL(String url) async {
