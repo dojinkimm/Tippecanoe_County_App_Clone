@@ -11,6 +11,7 @@ class Data{
   final IconData icon;
   final Color color; 
   final String url;
+  final Map<String, String> dialog;
 
   Data({
     this.status,
@@ -18,6 +19,7 @@ class Data{
     this.title,
     this.icon,
     this.color,
-    this.url
+    this.url,
+    this.dialog,
   });
 }
