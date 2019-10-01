@@ -28,6 +28,8 @@ class GridList extends StatelessWidget {
 
   Widget _gridList(List<Data> data, BuildContext context){
     return GridView.builder(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
       gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3, mainAxisSpacing: 0.0, crossAxisSpacing: 0.0),
       padding: const EdgeInsets.all(15.0),
@@ -41,7 +43,7 @@ class GridList extends StatelessWidget {
   }
 
   Widget _buildCard(BuildContext context, Data d, Color cardColor){
-    return Container(
+    return Center(
           child: InkWell(
             onTap: (){
               if (d.status==BlockStatus.ADMIN){
@@ -56,6 +58,8 @@ class GridList extends StatelessWidget {
                 infoBloc.eventSink.add(StartEvent());
               }else if (d.status==BlockStatus.URL_LAUNCHER){
                 _launchURL(d.url);
+              }else if (d.status == BlockStatus.MODAL){
+                _launchModal(context, d);
               }
             },
             child: Card(
@@ -82,6 +86,32 @@ class GridList extends StatelessWidget {
   } else {
     throw 'Could not launch $url';
   }
+}
+
+Future<void> _launchModal(BuildContext context, Data d) {
+  return showDialog<void>(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Center(child: Text(d.title),),
+        content: Container(
+            height: MediaQuery.of(context).size.height*0.2,
+            width: MediaQuery.of(context).size.width*0.5,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: d.dialog.length,
+              itemBuilder: (BuildContext context, int index) {
+                String key = d.dialog.keys.elementAt(index);
+                return ListTile(
+                  title: Text(key, style: TextStyle(fontSize: 20.0),),
+                  onTap: ()=>_launchURL(d.dialog[key]),
+                );
+              },
+            ),
+          ),
+      );
+    },
+  );
 }
 
 }

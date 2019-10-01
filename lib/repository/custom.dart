@@ -8,9 +8,9 @@ List<Data> info_main = [
   Data(index: 2, title: "Corrections", icon: Icons.star, color: Colors.blue, status: BlockStatus.CORRECTIONS),
   Data(index: 3, title: "We-Tip", icon: Icons.lightbulb_outline, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "https://wetip.com/"),
   Data(index: 4, title: "Contacts", icon: Icons.people, color: Colors.blue, status: BlockStatus.MODAL, 
-        dialog: {"Administration":"7654239388",
-        "Dispatch":"7654239321",
-        "Jail":"7654231655"}),
+        dialog: {"Administration":"tel:+1 765 423 9388",
+        "Dispatch":"tel:+1 765 423 9321",
+        "Jail":"tel:+1 765 423 1655"}),
   Data(index: 5, title: "Services", icon: FontAwesomeIcons.handsHelping, color: Colors.blueAccent, status: BlockStatus.SERVICES),
   Data(index: 6, title: "Social Media", icon: FontAwesomeIcons.globe, color: Colors.blue, status: BlockStatus.SNS),
   Data(index: 7, title: "Privacy Policy", icon: Icons.assignment, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "https://github.com/canis617/Tippecanoe-County-Sheriff-App/blob/develop2/privacy_policy.md")
@@ -19,7 +19,7 @@ List<Data> info_main = [
 List<Data> info_admin = [
   Data(index: 0, title: "Back", icon: Icons.arrow_back, color: Colors.blue, status: BlockStatus.BACK),
   Data(index: 1, title: "Phone Directory", icon: Icons.phone, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "https://www.tippecanoe.in.gov/Directory.aspx?did=43"),
-  Data(index: 2, title: "Admin Line", icon: Icons.person_add, color: Colors.blue, status: BlockStatus.URL_LAUNCHER, url: "tel:+1 7654239388"),
+  Data(index: 2, title: "Admin Line", icon: Icons.person_add, color: Colors.blue, status: BlockStatus.URL_LAUNCHER, url: "tel:+1 765 423 9388"),
   Data(index: 3, title: "Job Apply", icon: Icons.person, color: Colors.blueAccent, status: BlockStatus.URL_LAUNCHER, url: "https://www.tippecanoe.in.gov/470/Employment"),
 ];
 
