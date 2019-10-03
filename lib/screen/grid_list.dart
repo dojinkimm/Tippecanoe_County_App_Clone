@@ -113,5 +113,4 @@ Future<void> _launchModal(BuildContext context, Data d) {
     },
   );
 }
-
 }
