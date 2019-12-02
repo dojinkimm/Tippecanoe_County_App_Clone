@@ -9,7 +9,9 @@ class Data{
   final String title;
   final Widget svg;
   final String url;
+  final String email;
   final Map<String, String> dialog;
+  
 
   Data({
     this.status,
@@ -17,6 +19,7 @@ class Data{
     this.title,
     this.svg,
     this.url,
+    this.email,
     this.dialog,
   });
 }

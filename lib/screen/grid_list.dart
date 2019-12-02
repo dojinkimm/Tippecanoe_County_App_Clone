@@ -50,7 +50,7 @@ class GridList extends StatelessWidget {
             } else if (d.status == BlockStatus.MODAL) {
               _launchModal(context, d);
             } else if (d.status == BlockStatus.EMAIL) {
-              print("EMAIL");
+              _launchURL(d.email);
             }
           },
           child: Column(
