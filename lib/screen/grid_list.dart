@@ -4,7 +4,6 @@ import 'package:url_launcher/url_launcher.dart';
 import '../blocs/information_bloc.dart';
 import '../models/data.dart';
 
-
 class GridList extends StatelessWidget {
   final infoBloc;
   GridList({Key key, this.infoBloc}) : super(key: key);
@@ -43,34 +42,32 @@ class GridList extends StatelessWidget {
 
   Widget _buildCard(BuildContext context, Data d) {
     return Container(
-      alignment: Alignment.center,
+        alignment: Alignment.center,
         child: InkWell(
-            onTap: () {
-              if (d.status == BlockStatus.ADMIN) {
-                infoBloc.eventSink.add(AdminClick());
-              } else if (d.status == BlockStatus.CORRECTIONS) {
-                infoBloc.eventSink.add(CorrectionsClick());
-              } else if (d.status == BlockStatus.SERVICES) {
-                infoBloc.eventSink.add(ServicesClick());
-              } else if (d.status == BlockStatus.SNS) {
-                infoBloc.eventSink.add(SocialMediaClick());
-              } else if (d.status == BlockStatus.BACK) {
-                infoBloc.eventSink.add(StartEvent());
-              } else if (d.status == BlockStatus.URL_LAUNCHER) {
-                _launchURL(d.url);
-              } else if (d.status == BlockStatus.MODAL) {
-                _launchModal(context, d);
-              }
-            },
-            child: Column(
-                children: <Widget>[
-                  SizedBox(child: d.svg, height: MediaQuery.of(context).size.width*0.15),
-                  SizedBox(
-                    height: 5.0,
-                  ),
-                   Text(d.title, style: TextStyle(fontWeight: FontWeight.w500),)
-                ],
-              ),));
+          onTap: () {
+            if (d.status == BlockStatus.URL_LAUNCHER) {
+              _launchURL(d.url);
+            } else if (d.status == BlockStatus.MODAL) {
+              _launchModal(context, d);
+            } else if (d.status == BlockStatus.EMAIL) {
+              print("EMAIL");
+            }
+          },
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                  child: d.svg,
+                  height: MediaQuery.of(context).size.width * 0.15),
+              SizedBox(
+                height: 5.0,
+              ),
+              Text(
+                d.title,
+                style: TextStyle(fontWeight: FontWeight.w500),
+              )
+            ],
+          ),
+        ));
   }
 
   _launchURL(String url) async {
@@ -87,26 +84,42 @@ class GridList extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Center(
-            child: Text(d.title),
+            child: Text(
+              d.title,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
+            ),
           ),
           content: Container(
-            height: MediaQuery.of(context).size.height * 0.2,
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.8,
             child: ListView.builder(
               shrinkWrap: true,
               itemCount: d.dialog.length,
               itemBuilder: (BuildContext context, int index) {
                 String key = d.dialog.keys.elementAt(index);
                 return ListTile(
-                  title: Text(
+                  title: Center(
+                      child: Text(
                     key,
-                    style: TextStyle(fontSize: 20.0),
-                  ),
+                    style: TextStyle(
+                        fontSize: 20.0, decoration: TextDecoration.underline),
+                  )),
                   onTap: () => _launchURL(d.dialog[key]),
                 );
               },
             ),
           ),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text(
+                "Close",
+                style: TextStyle(fontSize: 18.0),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
         );
       },
     );

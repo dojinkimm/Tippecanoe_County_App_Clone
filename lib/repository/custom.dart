@@ -1,36 +1,6 @@
 import '../models/data.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-// List<Data> info_sns = [
-//   Data(
-//       index: 0,
-//       title: "Back",
-//       icon: Icons.arrow_back,
-//       color: Colors.blue,
-//       status: BlockStatus.BACK),
-//   Data(
-//       index: 1,
-//       title: "Facebook",
-//       icon: FontAwesomeIcons.facebookSquare,
-//       color: Colors.blueAccent,
-//       status: BlockStatus.URL_LAUNCHER,
-//       url: "https://www.facebook.com/TCSOIndiana"),
-//   Data(
-//       index: 2,
-//       title: "Twitter",
-//       icon: FontAwesomeIcons.twitterSquare,
-//       color: Colors.blue,
-//       status: BlockStatus.URL_LAUNCHER,
-//       url: "https://mobile.twitter.com/tippecanoecosh1"),
-//   Data(
-//       index: 3,
-//       title: "Instgram",
-//       icon: FontAwesomeIcons.instagram,
-//       color: Colors.blueAccent,
-//       status: BlockStatus.URL_LAUNCHER,
-//       url: "https://www.instagram.com/tcso79/"),
-// ];
-
 List<Data> lafayette = [
   Data(
       index: 0,
@@ -44,9 +14,8 @@ List<Data> lafayette = [
       svg: SvgPicture.asset("assets/001-video-visitation.svg", semanticsLabel: 'Video Visitation'),
       status: BlockStatus.MODAL,
       dialog: {
-        "GTL Video Visitation Web":
+        "GTL Video Visitation Web": 
             "https://tippecanoein.gtlvisitme.com/VisitorKiosk/app",
-        "Open The Vismobile App": "",
         "Download Vismobile App":
             "https://play.google.com/store/apps/details?id=air.com.renovo.vismobile&hl=en_US"
       }),
@@ -78,7 +47,7 @@ List<Data> lafayette = [
       index: 6,
       title: "Traffic Complaints",
       svg: SvgPicture.asset("assets/006-traffic.svg", semanticsLabel: 'Traffic Complaints'),
-      status: BlockStatus.COMPLAINT),
+      status: BlockStatus.EMAIL),
   Data(
       index: 7,
       title: "We-Tip",
@@ -147,10 +116,12 @@ List<Data> lafayette = [
       index: 16,
       title: "Social Media",
       svg: SvgPicture.asset("assets/016-sns.svg", semanticsLabel: 'SNS'),
-      status: BlockStatus.SNS),
+      status: BlockStatus.MODAL,
+      dialog: {"Facebook": "https://www.facebook.com/TCSOIndiana", "Twitter": "https://mobile.twitter.com/tippecanoecosh1", "Instagram":"https://www.instagram.com/tcso79/"}
+      ),
   Data(
       index: 17,
       title: "Event Security",
       svg: SvgPicture.asset("assets/017-balloon.svg", semanticsLabel: 'Event Security'),
-      status: BlockStatus.SNS),
+      status: BlockStatus.EMAIL),
 ];

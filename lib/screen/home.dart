@@ -37,7 +37,6 @@ class _HomeState extends State<Home> {
           _footer(context),
         ],
       ),
-      // bottomSheet: _footer(context),
     );
   }
 

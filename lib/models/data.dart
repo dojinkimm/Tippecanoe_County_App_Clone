@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum BlockStatus { ADMIN, CORRECTIONS, SERVICES, SNS, 
-                    BACK, URL_LAUNCHER, MODAL, COMPLAINT }
+enum BlockStatus { MAIN, URL_LAUNCHER, MODAL, EMAIL}
 
 
 class Data{

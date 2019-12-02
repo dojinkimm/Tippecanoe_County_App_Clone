@@ -8,14 +8,6 @@ abstract class InformationEvent {}
 
 class StartEvent extends InformationEvent {}
 
-class AdminClick extends InformationEvent {}
-
-class CorrectionsClick extends InformationEvent {}
-
-class ServicesClick extends InformationEvent {}
-
-class SocialMediaClick extends InformationEvent {}
-
 class InformationBloc implements BlocBase {
 
   BehaviorSubject<List<Data>> _informationController =
