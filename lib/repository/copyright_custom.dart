@@ -1,5 +1,4 @@
 import '../models/copyright_data.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 List<CopyRightData> copyR = [
   CopyRightData(

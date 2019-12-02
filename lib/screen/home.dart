@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'grid_list.dart';
 import 'copyright.dart';
+import 'question_screen.dart';
 import '../blocs/bloc_provider.dart';
 import '../blocs/information_bloc.dart';
 import '../repository/get_weather.dart';
@@ -34,6 +35,7 @@ class _HomeState extends State<Home> {
       body: ListView(
         children: <Widget>[
           _image(),
+          QuestionScreen(),
           Container(child: GridList(infoBloc: infoBloc)),
           _footer(context),
         ],
