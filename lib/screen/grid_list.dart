@@ -19,7 +19,11 @@ class GridList extends StatelessWidget {
           return Container();
         }else{
           List<Data> data = snapshot.data;
-          return _gridList(data, context);
+          return Container(
+            color: Colors.white,
+            margin: const EdgeInsets.all(20.0),
+            child: _gridList(data, context)
+          );
         }
       },
       
@@ -36,13 +40,11 @@ class GridList extends StatelessWidget {
       itemCount: data.length,
       itemBuilder: (_, int index) {
         Data d = data[index];
-        Color cardColor = index%2==0? Color.fromRGBO(132, 108, 77, 1) : Color.fromRGBO(153, 134, 104, 1);
-
-        return _buildCard(context, d, cardColor);
+        return _buildCard(context, d);
       });
   }
 
-  Widget _buildCard(BuildContext context, Data d, Color cardColor){
+  Widget _buildCard(BuildContext context, Data d){
     return Center(
           child: InkWell(
             onTap: (){
@@ -63,15 +65,14 @@ class GridList extends StatelessWidget {
               }
             },
             child: Card(
-            color: cardColor,
             child: Container(
               alignment: Alignment.center,
               child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Icon(d.icon, color: Colors.white, size:MediaQuery.of(context).size.width*0.13),
+                Icon(d.icon, size:MediaQuery.of(context).size.width*0.13),
                 SizedBox(height: 10.0,),
-                Center(child: AutoSizeText(d.title, style: TextStyle(color: Colors.white), maxLines: 2),)
+                Center(child: AutoSizeText(d.title, maxLines: 2),)
               ],
             ),
             )

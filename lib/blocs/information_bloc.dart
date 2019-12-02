@@ -2,6 +2,7 @@ import 'package:rxdart/rxdart.dart';
 import 'bloc_provider.dart';
 import '../models/data.dart';
 import '../repository/custom.dart';
+import '../repository/custom_new.dart';
 
 abstract class InformationEvent {}
 
@@ -47,7 +48,8 @@ class InformationBloc implements BlocBase {
   }
 
   void _start(){
-    _inInformation.add(info_main);
+    // _inInformation.add(info_main);
+    _inInformation.add(lafayette);
   }
 
   void _admin(){

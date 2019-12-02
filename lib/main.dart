@@ -14,8 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sheriff App',
       theme: ThemeData(
-        primarySwatch: Colors.brown,
-        scaffoldBackgroundColor: Color.fromRGBO(78, 68, 52, 1)
+        scaffoldBackgroundColor: Colors.grey
       ),
       home: Home(),
     );

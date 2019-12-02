@@ -28,6 +28,7 @@ dependencies:
   font_awesome_flutter: ^8.5.0
   auto_size_text: ^2.1.0
   http: ^0.12.0+2
+  flutter_svg: ^0.15.0
 
 dev_dependencies:
   flutter_test:
