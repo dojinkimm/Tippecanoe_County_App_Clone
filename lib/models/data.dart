@@ -8,9 +8,7 @@ class Data{
   final BlockStatus status;
   final int index;
   final String title;
-  final IconData icon;
   final Widget svg;
-  final Color color; 
   final String url;
   final Map<String, String> dialog;
 
@@ -18,9 +16,7 @@ class Data{
     this.status,
     this.index,
     this.title,
-    this.icon,
     this.svg,
-    this.color,
     this.url,
     this.dialog,
   });

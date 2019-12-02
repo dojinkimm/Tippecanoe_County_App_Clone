@@ -2,7 +2,7 @@ import 'package:rxdart/rxdart.dart';
 import 'bloc_provider.dart';
 import '../models/data.dart';
 import '../repository/custom.dart';
-import '../repository/custom_new.dart';
+// import '../repository/custom_old.dart';
 
 abstract class InformationEvent {}
 
@@ -36,15 +36,16 @@ class InformationBloc implements BlocBase {
   void _mapEventToState(InformationEvent event) {
     if (event is StartEvent){
       _start();
-    }else if(event is AdminClick) {
-      _admin();
-    } else if (event is CorrectionsClick) {
-      _correction();
-    } else if (event is ServicesClick) {
-      _services();
-    } else if (event is SocialMediaClick) {
-      _sns();
     }
+    // else if(event is AdminClick) {
+    //   _admin();
+    // } else if (event is CorrectionsClick) {
+    //   _correction();
+    // } else if (event is ServicesClick) {
+    //   _services();
+    // } else if (event is SocialMediaClick) {
+    //   _sns();
+    // }
   }
 
   void _start(){
@@ -52,21 +53,21 @@ class InformationBloc implements BlocBase {
     _inInformation.add(lafayette);
   }
 
-  void _admin(){
-    _inInformation.add(info_admin);
-  }
+  // void _admin(){
+  //   _inInformation.add(info_admin);
+  // }
 
-   void _correction(){
-     _inInformation.add(info_correction);
-  }
+  //  void _correction(){
+  //    _inInformation.add(info_correction);
+  // }
 
-   void _services(){
-     _inInformation.add(info_services);
-  }
+  //  void _services(){
+  //    _inInformation.add(info_services);
+  // }
 
-  void _sns(){
-     _inInformation.add(info_sns);
-  }
+  // void _sns(){
+  //    _inInformation.add(info_sns);
+  // }
 
   void dispose() async {
     await _informationController.drain();

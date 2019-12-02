@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 
 import '../blocs/information_bloc.dart';
 import '../models/data.dart';
+
 
 class GridList extends StatelessWidget {
   final infoBloc;
@@ -42,7 +42,8 @@ class GridList extends StatelessWidget {
   }
 
   Widget _buildCard(BuildContext context, Data d) {
-    return Center(
+    return Container(
+      alignment: Alignment.center,
         child: InkWell(
             onTap: () {
               if (d.status == BlockStatus.ADMIN) {
@@ -61,22 +62,15 @@ class GridList extends StatelessWidget {
                 _launchModal(context, d);
               }
             },
-            child: Container(
-              margin: const EdgeInsets.all(5.0),
-              alignment: Alignment.center,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+            child: Column(
                 children: <Widget>[
-                  SizedBox(child: d.svg, height: MediaQuery.of(context).size.width*0.15,),
+                  SizedBox(child: d.svg, height: MediaQuery.of(context).size.width*0.15),
                   SizedBox(
-                    height: 3.0,
+                    height: 5.0,
                   ),
-                  Center(
-                    child: AutoSizeText(d.title, maxLines: 2),
-                  )
+                   Text(d.title, style: TextStyle(fontWeight: FontWeight.w500),)
                 ],
-              ),
-            )));
+              ),));
   }
 
   _launchURL(String url) async {

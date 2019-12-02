@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './screen/home.dart';
+import './screen/splashscreen.dart';
 import 'blocs/bloc_provider.dart';
 import 'blocs/information_bloc.dart';
 
@@ -14,9 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sheriff App',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.grey
+        scaffoldBackgroundColor: Color.fromRGBO(241,242,246,1)
       ),
-      home: Home(),
+      home: Splash(),
     );
   }
 }
