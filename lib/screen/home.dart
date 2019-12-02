@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'grid_list.dart';
+import 'copyright.dart';
 import '../blocs/bloc_provider.dart';
 import '../blocs/information_bloc.dart';
 import '../repository/get_weather.dart';
@@ -24,7 +25,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Container(
           child: Center(
-            child: _updateTempWidget(_cityEntered),
+            child: _updateTempWidget(_cityEntered, context),
           ),
         ),
         backgroundColor: Colors.white,
@@ -40,7 +41,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget _updateTempWidget(String city) {
+  Widget _updateTempWidget(String city, var context) {
     return new FutureBuilder(
         future: getWeather(city == null ? util.defaultCity : city),
         builder: (BuildContext context, AsyncSnapshot<Map> snapshot) {
@@ -51,7 +52,7 @@ class _HomeState extends State<Home> {
             return Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Flexible(flex:1, child: svg),
+                Flexible(flex:1, child: SizedBox(height: MediaQuery.of(context).size.height*0.05, child: svg,)),
                 Flexible(flex:2,
                     child: Text(
                       util.defaultCity +
@@ -82,6 +83,7 @@ class _HomeState extends State<Home> {
         children: <Widget>[
           InkWell(
             child: Text("CopyRight"),
+            onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>CopyRight())),
           ),
           Container(
               margin: const EdgeInsets.symmetric(horizontal: 10.0),

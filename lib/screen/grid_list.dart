@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../blocs/information_bloc.dart';
 import '../models/data.dart';
 
 class GridList extends StatelessWidget {
