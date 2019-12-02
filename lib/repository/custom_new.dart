@@ -1,5 +1,6 @@
 import '../models/data.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // List<Data> info_sns = [
@@ -35,16 +36,18 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 List<Data> lafayette = [
   Data(
       index: 0,
-      title: "Inmate lookup",
+      title: "Inmate Lookup",
       icon: Icons.line_weight,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/000-jail.svg", semanticsLabel: 'Jail'),
       status: BlockStatus.URL_LAUNCHER,
       url: "http://www3.tippecanoe.in.gov/InmateListing/InmateSearch.aspx"),
   Data(
       index: 1,
-      title: "Video visitation",
+      title: "Video Visitation",
       icon: Icons.videocam,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/001-video-visitation.svg", semanticsLabel: 'Video Visitation'),
       status: BlockStatus.MODAL,
       dialog: {
         "GTL Video Visitation Web":
@@ -58,6 +61,7 @@ List<Data> lafayette = [
       title: "Visitation Policy",
       icon: FontAwesomeIcons.userCheck,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/002-policy.svg", semanticsLabel: 'Visitation Policy'),
       status: BlockStatus.URL_LAUNCHER,
       url: "http://www.tippecanoe.in.gov/468/Inmate-Visitation-Policy"),
   Data(
@@ -65,6 +69,7 @@ List<Data> lafayette = [
       title: "Commissary",
       icon: Icons.store_mall_directory,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/003-commissary.svg", semanticsLabel: 'Commissary',),
       status: BlockStatus.URL_LAUNCHER,
       url: "https://deposits.jailatm.com/WebDeposits/Default.aspx"),
   Data(
@@ -72,6 +77,7 @@ List<Data> lafayette = [
       title: "Crash Report",
       icon: FontAwesomeIcons.carCrash,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/003-commissary.svg", semanticsLabel: 'Crash Report'),
       status: BlockStatus.URL_LAUNCHER,
       url: "http://tippecanoe.in.gov/486/Crash-Reports"),
   Data(
@@ -79,6 +85,7 @@ List<Data> lafayette = [
       title: "Records Request",
       icon: FontAwesomeIcons.search,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/005-record.svg", semanticsLabel: 'Record Request'),
       status: BlockStatus.URL_LAUNCHER,
       url: "http://tippecanoe.in.gov/524/Public-Record-Requests"),
   Data(
@@ -86,12 +93,14 @@ List<Data> lafayette = [
       title: "Traffic Complaints",
       icon: FontAwesomeIcons.exclamationTriangle,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/006-traffic.svg", semanticsLabel: 'Traffic Complaints'),
       status: BlockStatus.COMPLAINT),
   Data(
       index: 7,
       title: "We-Tip",
       icon: Icons.lightbulb_outline,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/007-tip.svg", semanticsLabel: 'We-Tip'),
       status: BlockStatus.URL_LAUNCHER,
       url: "https://wetip.com/"),
   Data(
@@ -99,6 +108,7 @@ List<Data> lafayette = [
       title: "Sex Offenders",
       icon: FontAwesomeIcons.addressCard,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/008-sex.svg", semanticsLabel: 'Sex Offenders'),
       status: BlockStatus.URL_LAUNCHER,
       url:
           "http://sheriffalerts.com/cap_office_disclaimer.php?office=54758&fwd=aHR0cDovL3d3dy5pY3JpbWV3YXRjaC5uZXQvaW5kZXgucGhwP0FnZW5jeUlEPTU0NzU4"),
@@ -107,6 +117,7 @@ List<Data> lafayette = [
       title: "Sheriff Sale",
       icon: FontAwesomeIcons.percentage,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/009-sale.svg", semanticsLabel: 'Sheriff Sale'),
       status: BlockStatus.MODAL,
       dialog: {
         "Sheriff's Sale Guideline":
@@ -119,6 +130,8 @@ List<Data> lafayette = [
       title: "Tax Warrants",
       icon: FontAwesomeIcons.dollarSign,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/009-sale.svg", semanticsLabel: 'Sheriff Sale'),
+      // svg: SvgPicture.asset("assets/010-tax.svg", semanticsLabel: 'Tax Warrants'),
       status: BlockStatus.URL_LAUNCHER,
       url: "http://tippecanoe.in.gov/480/Tax-Warrants"),
   Data(
@@ -126,6 +139,7 @@ List<Data> lafayette = [
       title: "Gun Permits",
       icon: FontAwesomeIcons.helicopter,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/011-gun.svg", semanticsLabel: 'Gun Permits'),
       status: BlockStatus.URL_LAUNCHER,
       url: "http://tippecanoe.in.gov/477/Firearm-Permits"),
   Data(
@@ -133,6 +147,7 @@ List<Data> lafayette = [
       title: "Contact Us",
       icon: Icons.people,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/012-contact.svg", semanticsLabel: 'Contacts'),
       status: BlockStatus.MODAL,
       dialog: {
         "Administration": "tel:+1 765 423 9388",
@@ -144,6 +159,7 @@ List<Data> lafayette = [
       title: "Career",
       icon: Icons.person,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/013-career.svg", semanticsLabel: 'Career'),
       status: BlockStatus.URL_LAUNCHER,
       url: "https://www.tippecanoe.in.gov/470/Employment"),
   Data(
@@ -151,6 +167,7 @@ List<Data> lafayette = [
       title: "Animal Control",
       icon: FontAwesomeIcons.dog,
       color: Colors.blueAccent,
+      svg: SvgPicture.asset("assets/014-dog.svg", semanticsLabel: 'Acme Logo'),
       status: BlockStatus.URL_LAUNCHER,
       url: "http://tippecanoe.in.gov/473/Animal-Control"),
   Data(
@@ -158,6 +175,7 @@ List<Data> lafayette = [
       title: "Extra Patrol Request",
       icon: FontAwesomeIcons.shieldAlt,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/015-police-car.svg", semanticsLabel: 'Extra Patrol Request'),
       status: BlockStatus.MODAL,
       dialog: {"Security Request": "", "Extra Patrol Request": ""}),
   Data(
@@ -165,11 +183,13 @@ List<Data> lafayette = [
       title: "Social Media",
       icon: FontAwesomeIcons.globe,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/016-sns.svg", semanticsLabel: 'SNS'),
       status: BlockStatus.SNS),
-    Data(
+  Data(
       index: 17,
       title: "Event Security",
       icon: FontAwesomeIcons.globe,
       color: Colors.blue,
+      svg: SvgPicture.asset("assets/017-balloon.svg", semanticsLabel: 'Event Security'),
       status: BlockStatus.SNS),
 ];
