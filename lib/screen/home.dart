@@ -18,6 +18,12 @@ class _HomeState extends State<Home> {
   String _cityEntered;
 
   @override
+  void initState() {
+    super.initState();
+    _cityEntered=null;
+  }
+
+  @override
   Widget build(BuildContext context) {
     final InformationBloc infoBloc = BlocProvider.of<InformationBloc>(context);
     infoBloc.eventSink.add(StartEvent());
@@ -97,4 +103,5 @@ class _HomeState extends State<Home> {
       ),
     );
   }
+
 }

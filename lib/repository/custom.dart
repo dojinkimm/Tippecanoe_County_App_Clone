@@ -47,7 +47,7 @@ List<Data> lafayette = [
       index: 6,
       title: "Traffic Complaints",
       svg: SvgPicture.asset("assets/006-traffic.svg", semanticsLabel: 'Traffic Complaints'),
-      email: "mailto:traffic@tippecanoe.in.gov?subject=Traffic Complaints&body=body",
+      email: "mailto:traffic@tippecanoe.in.gov?subject=Traffic Complaints&body=&body=Name of requestor:<br/>Address of request:<br/> Requestor phone number:",
       status: BlockStatus.EMAIL),
   Data(
       index: 7,
@@ -113,7 +113,7 @@ List<Data> lafayette = [
       title: "Patrol Request",
       svg: SvgPicture.asset("assets/015-police-car.svg", semanticsLabel: 'Extra Patrol Request'),
       status: BlockStatus.EMAIL,
-      email: "mailto:tcsodispatch@tippecanoe.in.gov?subject=Extra Patrol Request&body=body"),
+      email: "mailto:tcsodispatch@tippecanoe.in.gov?subject=Extra Patrol Request&body=Name of requestor:<br/>Address of request:<br/> Requestor phone number:"),
   Data(
       index: 16,
       title: "Social Media",
@@ -125,5 +125,6 @@ List<Data> lafayette = [
       index: 17,
       title: "Event Security",
       svg: SvgPicture.asset("assets/017-balloon.svg", semanticsLabel: 'Event Security'),
+      email: "mailto:rwhainje@tippecanoe.in.gov?subject=Event Security&body=&body=Name of requestor:<br/>Address of request:<br/> Requestor phone number:",
       status: BlockStatus.EMAIL),
 ];

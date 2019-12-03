@@ -28,11 +28,21 @@ dependencies:
   splashscreen: ^1.2.0
   http: ^0.12.0+2
   flutter_svg: ^0.15.0
+  
+  
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.7.4
+
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/splash_logo.png"
+  image_path_ios: "assets/splash_logo.png"
+  image_path_android: "assets/splash_logo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
