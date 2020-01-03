@@ -4,8 +4,8 @@ This app is a cloned app of `Tippecanoe Sheriff's Office` application developed 
 
 (React Native로 개발된 `Tippecanoe Sheriff's Office` 을 Flutter로 클론한 프로젝트입니다.)
 
-Original app's source code and App download URL can be found below(오리지널 앱의 RN 소스코드와 다운로드 링크는 밑에서 볼 수 있습니다)
-[RN Source Code Repo](https://github.com/hyunsikshin/Tippecanoe-County-Sheriff-Office)
+Original app's source code and App download URL can be found below (오리지널 앱의 RN 소스코드와 다운로드 링크는 밑에서 볼 수 있습니다)<br/>
+[RN Source Code Repo](https://github.com/hyunsikshin/Tippecanoe-County-Sheriff-Office)<br/>
 [PlayStore](https://play.google.com/store/apps/details?id=com.tippsranger.tippecanoe_county_sheriff_app)
 
 ## Page Introduction
