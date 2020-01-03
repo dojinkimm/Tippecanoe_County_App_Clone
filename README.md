@@ -12,21 +12,21 @@ Original app can be found below(오리지널 앱은 밑에서 볼 수 있습니�
 ### Application logo and splash screen
 
 <div style="display:inline-block;" align="center">
-<img src="assets/snapshot/background.png" width=200>
-<img src="assets/snapshot/splash.png" width=200></div>
+<img src="assets/snapshot/background.png" width=300>
+<img src="assets/snapshot/splash.png" width=300></div>
 
 
 ### Main Page and Frequently Asked Questions
 
 <div style="display:inline-block;" align="center">
-<img src="assets/snapshot/mainpage.png" width=200>
-<img src="assets/snapshot/questions.png" width=200></div>
+<img src="assets/snapshot/mainpage.png" width=300>
+<img src="assets/snapshot/questions.png" width=300></div>
 
 ### Modal and Redirections
 
 <div style="display:inline-block;" align="center">
-<img src="assets/snapshot/modal.png" width=200>
-<img src="assets/snapshot/redirect.png" width=200>
+<img src="assets/snapshot/modal.png" width=300>
+<img src="assets/snapshot/redirect.png" width=300>
 <img src="assets/snapshot/email.jpeg" width=200></div>
 
 <hr/>
