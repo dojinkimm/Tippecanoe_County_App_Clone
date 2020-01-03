@@ -1,16 +1,39 @@
-# sheriff_app
+# Tippecanoe Sheriff's Office App clone
 
-A new Flutter project.
+This app is a cloned app of `Tippecanoe Sheriff's Office` application developed with Flutter. The original app uploaded in playstore is developed with React Native.
 
-## Getting Started
+(React Native로 개발된 `Tippecanoe Sheriff's Office` 을 Flutter로 클론한 프로젝트입니다.)
 
-This project is a starting point for a Flutter application.
+Original app can be found below(오리지널 앱은 밑에서 볼 수 있습니다)
+[PlayStore](https://play.google.com/store/apps/details?id=com.tippsranger.tippecanoe_county_sheriff_app)
 
-A few resources to get you started if this is your first Flutter project:
+## Page Introduction
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Application logo and splash screen
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div style="display:inline-block;" align="center">
+<img src="assets/snapshot/background.png" width=200>
+<img src="assets/snapshot/splash.png" width=200></div>
+
+
+### Main Page and Frequently Asked Questions
+
+<div style="display:inline-block;" align="center">
+<img src="assets/snapshot/mainpage.png" width=200>
+<img src="assets/snapshot/questions.png" width=200></div>
+
+### Modal and Redirections
+
+<div style="display:inline-block;" align="center">
+<img src="assets/snapshot/modal.png" width=200>
+<img src="assets/snapshot/redirect.png" width=200>
+<img src="assets/snapshot/email.jpeg" width=200></div>
+
+<hr/>
+<br/><br/><br/>
+
+Icons used in this applications are downloaded from [FlatIcons](https://www.flaticon.com/). Authors of icons are credited in `copyrights` tab in the application
+
+## License
+
+Sheriff App is released under the MIT license.
